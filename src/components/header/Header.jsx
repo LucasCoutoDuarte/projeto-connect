@@ -9,7 +9,7 @@ import { Link, useLocation } from "react-router-dom";
 import Logo from "../../images/logo.png";
 import { DropdownAvatar } from "../DropdownAvatar/DropdownAvatar";
 import DropdownMobile from "../DropdownMobile/DropdownMobile";
-import h from "./Header.module.scss";
+import h from "./header.module.scss";
 
 const navLinks = [
   { icon: Home, label: "Início", path: "/" },
