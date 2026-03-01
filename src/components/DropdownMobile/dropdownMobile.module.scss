@@ -1,0 +1,134 @@
+@use "../../styles/variables.scss" as v;
+
+.dropdownContainerMobile {
+    position: relative;
+    display: inline-block;
+
+    @media (width >= 1024px) {
+        display: none;
+    }
+}
+
+.dropdownTrigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    border: none;
+    transition: all 0.2s ease;
+    background: transparent;
+    border-radius: 40px;
+    color: v.$neutral-50;
+
+    &:hover,
+    &.active {
+        box-shadow: v.$shadow;
+    }
+
+    img {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    span {
+        font-weight: 500;
+        font-size: 1 rem;
+
+        @media (width < 480px) {
+            display: none;
+        }
+    }
+}
+
+.dropdownMenu {
+    .mobileOnlyLink {
+        display: none;
+
+        @media (width <= 65rem) {
+            display: flex;
+            gap: 1rem;
+        }
+
+        a {
+            font-weight: 600;
+            color: v.$primary-color;
+        }
+    }
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 220px;
+    background: v.$primary-color;
+    border-radius: 8px;
+    box-shadow: v.$shadow;
+    padding: 8px;
+    margin: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    @media (width <= 480px) {
+        position: fixed;
+        top: 70px;
+        bottom: 20px;
+        right: 30px;
+        width: fit-content;
+        height: fit-content;
+    }
+}
+
+.mobileOnlyLink {
+    display: flex;
+    align-items: center;
+    color: v.$neutral-100;
+    font-size: 0.85rem;
+    padding: 10px 1rem;
+    border-radius: 0.5rem;
+
+    &:hover {
+        background-color: #f0f7ff;
+        color: v.$primary-color;
+    }
+}
+
+.linkActive {
+    background-color: #f0f7ff;
+    color: #000;
+}
+
+.divider {
+    height: 1px;
+    background: #eee;
+    margin: 4px 0;
+
+    @media (width >= 1025px) {
+        display: none;
+    }
+}
+
+.scaleInCenter {
+    animation: scale-in-center 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes scale-in-center {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.mobileOnlyLinkMobile {
+    @media (width >= 1025px) {
+        display: none;
+    }
+}

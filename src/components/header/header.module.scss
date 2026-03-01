@@ -1,0 +1,66 @@
+@use "../../styles/variables.scss" as v;
+
+.header {
+  background-color: v.$primary-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+
+  width: 100%;
+  max-width: 80rem;
+
+  position: relative;
+}
+
+.Logo {
+  img {
+    width: 3.5rem;
+  }
+}
+
+.navbarDesktop {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 600px;
+  width: 100%;
+
+  @media (width >= 64rem) {
+    display: flex;
+    gap: 1.25rem;
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1rem;
+  color: v.$bg-color;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  transition: all 600ms;
+
+  &:hover {
+    border-bottom: 2px solid v.$neutral-100;
+    color: v.$neutral-100;
+  }
+}
+
+.linkActive {
+  border-bottom: 1px solid v.$bg-color;
+  color: v.$bg-color;
+  letter-spacing: 0.05em;
+}
+
+.linkDefault {
+  color: v.$neutral-200;
+}

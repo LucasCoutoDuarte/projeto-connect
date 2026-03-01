@@ -1,0 +1,141 @@
+.main{
+    border: solid 2px red;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    img {
+        flex: 1;
+        max-width: 100%;
+        min-width: 0;
+        object-fit: contain;
+        display: block;;
+
+    }
+}
+
+.info{
+    border: solid 2px blue;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding: 0 20px;
+    h1{
+        font-size: 90px;
+        color: #205691;
+        font-family: 'Source Sans 3', sans-serif;
+        font-weight: 700;
+        width: 100%;
+        max-width: 45rem;
+        line-height: 1.1;
+    }
+    p{
+        font-family: 'Inter', sans-serif;
+        color: #205691;
+        font-size: 24px;
+        font-weight: 400;
+        width: 100%;
+        max-width: 45rem;
+        margin-top: 16px;
+    }
+    button{
+        border: none;
+        font-family: 'Source Sans 3', sans-serif;
+        background-color: #FD7267;
+        color: white;
+        padding: 20px 0;
+        width: 100%;
+        max-width: 330px;
+        font-size: 24px;
+        font-weight: 400;
+        cursor: pointer;
+        margin-top: 32px;
+    }
+}
+
+.infoDados{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 48px;
+    article{
+    flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h2,
+        h3{
+            color: #205691;
+            text-align: center;
+            margin: 0;
+        }
+        h2{
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+        }
+        h3{
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .main{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        img{
+            width: 100%;
+            max-width: 522px;
+        }
+    }
+    .info{
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        h1{
+            font-size: 80px;
+        }
+        h1, p{
+            text-align: center;
+        }
+        button{
+            width: 100%;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .infoDados{
+            article{
+                width: 120px;
+                h2{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .main{height: 1000px;
+    }
+    .info h1{
+        font-size: 40px;
+    }
+    .info p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 320px){
+    .infoDados{
+        flex-direction: column;
+    }
+}
