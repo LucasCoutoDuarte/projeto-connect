@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import d from "./DropdownAvatar.module.scss";
+import d from "./dropdownAvatar.module.scss";
 
 const navLinks = [
   { icon: User, label: "Lucas Couto Duarte", path: "/perfil" },
