@@ -4,8 +4,6 @@ O Projeto Connect é uma aplicação web desenvolvida para demonstrar domínio t
 
 O projeto evidencia a capacidade de construir interfaces performáticas, organizadas e preparadas para crescimento, aplicando princípios de componentização, padronização de código e foco em experiência do usuário.
 
-🔗 Deploy: https://projeto-connect-vnw.vercel.app/
-
 🎯 Objetivo Estratégico
 
 Demonstrar competências essenciais para ambientes profissionais de tecnologia, incluindo:
@@ -45,11 +43,6 @@ Vercel – Deploy contínuo (CI/CD) e hospedagem
 ✔ Experiência responsiva (mobile-first)
 ✔ Ambiente preparado para integração futura com back-end ou APIs REST
 
-📂 Execução Local
-git clone https://github.com/tatyanepgoncalves/projeto_connect.git
-cd projeto_connect
-npm install
-npm run dev
 👨‍💻 Desenvolvedor
 
 Lucas Couto Duarte
