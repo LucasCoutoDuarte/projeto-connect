@@ -1,5 +1,5 @@
 import { Calendar, Mail, MapPin } from "lucide-react";
-import u from "./usuario.module.scss";
+import u from "./UsuarioPage.module.scss";
 
 export default function UsuarioPage() {
   return (
