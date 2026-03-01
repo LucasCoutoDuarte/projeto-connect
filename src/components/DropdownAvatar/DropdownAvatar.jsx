@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import d from "./dropdownAvatar.module.scss";
+import d from "./DropdownAvatar.module.scss";
 
 const navLinks = [
   { icon: User, label: "Lucas Couto Duarte", path: "/perfil" },
@@ -43,7 +43,7 @@ export const DropdownAvatar = () => {
         onClick={toggleDropdown}
       >
         <img
-          alt="Avatar do perfil do Linkedin de Lucas Couto Duarte."
+          alt="Foto Lucas Couto Duarte."
           src="https://media.licdn.com/dms/image/v2/D4D03AQFWDFOqSOQ5mQ/profile-displayphoto-scale_400_400/B4DZj1VrW4GkAk-/0/1756462759571?e=1772668800&v=beta&t=FAbRnlFGzKCk6snZPpputN64sZ_r_rrPLVXZK-6c-w8"
         />
 

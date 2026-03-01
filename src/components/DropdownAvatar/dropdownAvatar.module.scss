@@ -1,94 +1,94 @@
 @use "../../styles/variables.scss" as v;
 
 .dropdownContainer {
-    position: relative;
-    display: none;
+  position: relative;
+  display: none;
 
-    @media (width >= 1024px) {
-        display: inline-block;
-    }
+  @media (width >= 1024px) {
+    display: inline-block;
+  }
 }
 
 .dropdownTrigger {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 6px 16px 6px 6px;
-    border: none;
-    transition: all 0.2s ease;
-    background: transparent;
-    border-radius: 40px;
-    color: v.$neutral-50;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px 6px 6px;
+  border: none;
+  transition: all 0.2s ease;
+  background: transparent;
+  border-radius: 40px;
+  color: v.$neutral-50;
 
-    &:hover,
-    &.active {
-        box-shadow: v.$shadow;
+  &:hover,
+  &.active {
+    box-shadow: v.$shadow;
+  }
+
+  img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  span {
+    font-weight: 500;
+    font-size: 0.9rem;
+
+    @media (width < 480px) {
+      display: none;
     }
-
-    img {
-        width: 2rem;
-        height: 2rem;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-
-    span {
-        font-weight: 500;
-        font-size: 0.9rem;
-
-        @media (width < 480px) {
-            display: none;
-        }
-    }
+  }
 }
 
 .dropdownMenu {
-    position: absolute;
-    top: calc(100% + 8px);
-    right: 0;
-    width: 220px;
-    background: v.$primary-color;
-    border-radius: 8px;
-    box-shadow: v.$shadow;
-    padding: 8px;
-    margin: 0;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 220px;
+  background: v.$primary-color;
+  border-radius: 8px;
+  box-shadow: v.$shadow;
+  padding: 8px;
+  margin: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .link {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: v.$neutral-100;
-    padding: 10px 1rem;
-    border-radius: 0.5rem;
-    font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: v.$neutral-100;
+  padding: 10px 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
 
-    &:hover {
-        background-color: #f0f7ff;
-        color: v.$primary-color;
-    }
+  &:hover {
+    background-color: #f0f7ff;
+    color: v.$primary-color;
+  }
 }
 
 .linkActive {
-    background-color: #f0f7ff;
-    color: v.$primary-color;
+  background-color: #f0f7ff;
+  color: v.$primary-color;
 }
 
 .scaleInCenter {
-    animation: scale-in-center 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-center 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes scale-in-center {
-    0% {
-        transform: scale(0.9);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

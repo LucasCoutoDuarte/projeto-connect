@@ -57,11 +57,11 @@ export default function DropdownMobile() {
         onClick={toggleDropdown}
       >
         <img
-          alt="Avatar do perfil do GitHub de Tatyane Gonçalves."
-          src="https://avatars.githubusercontent.com/u/158174190?v=4"
+          alt="Foto Lucas Couto Duarte."
+          src="https://media.licdn.com/dms/image/v2/D4D03AQFWDFOqSOQ5mQ/profile-displayphoto-scale_400_400/B4DZj1VrW4GkAk-/0/1756462759571?e=1772668800&v=beta&t=FAbRnlFGzKCk6snZPpputN64sZ_r_rrPLVXZK-6c-w8"
         />
 
-        <span>Tatyane Gonçalves</span>
+        <span>Lucas Couto</span>
         {isOpen ? <ChevronUp /> : <ChevronDown />}
       </button>
 

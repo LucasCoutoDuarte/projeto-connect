@@ -1,4 +1,10 @@
-import {CalendarHeart, GraduationCap, HandHeart, Home,  HouseHeart,} from "lucide-react";
+import {
+  CalendarHeart,
+  GraduationCap,
+  HandHeart,
+  Home,
+  HouseHeart,
+} from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../../images/logo.png";
 import { DropdownAvatar } from "../DropdownAvatar/DropdownAvatar";
@@ -19,10 +25,8 @@ export default function Header() {
     <header className={h.header}>
       <div className={h.headerContainer}>
         <Link className={h.Logo} to="/">
-          {/** biome-ignore lint/correctness/useImageSize: it isn't necessary */}
-          <img alt="Logo da página Connect de voluntários." src={Logo} />
+          <img alt="Logo da página dos voluntários." src={Logo} />
         </Link>
-
         <nav className={h.navbarDesktop}>
           {navLinks.map((item) => {
             const isActive = location.pathname === item.path;
@@ -38,7 +42,6 @@ export default function Header() {
             );
           })}
         </nav>
-
         <DropdownAvatar />
         <DropdownMobile />
       </div>

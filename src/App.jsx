@@ -1,28 +1,30 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Doacao from "./pages/doacao/Doacao";
-import Voluntariado from "./pages/voluntariado/Voluntariado";
-import Home from "./pages/home/Home";
-import Mentoria from "./pages/mentoria/Mentoria";
-import EventosEP from "./pages/eventosEP/EventosEP";
-import Usuario from "./pages/usuario/Usuario";
-import "./globalStyles.scss";
-import Header from "./components/header/Header";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from 'react-router-dom'
+import Layout from './components/Layout/Layout'
+import DoacaoPage from './pages/DoacaoPage/DoacaoPage'
+import EventosPage from './pages/EventosPage/EventosPage'
+import HomePage from './pages/HomePage/HomePage'
+import MentoriaPage from './pages/MentoriaPage/MentoriaPage'
+import UsuarioPage from './pages/UsuarioPage/UsuarioPage'
+import VolutariadoPage from './pages/VolutariadoPage/VolutariadoPage'
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route element={<Layout />} path="/">
+      <Route element={<HomePage />} index />
+      <Route element={<DoacaoPage />} path="doacao" />
+      <Route element={<VolutariadoPage />} path="voluntariado" />
+      <Route element={<MentoriaPage />} path="mentoria" />
+      <Route element={<EventosPage />} path="eventos-e-palestras" />
+      <Route element={<UsuarioPage />} path="perfil" />
+    </Route>
+  )
+)
 
 export default function App() {
-  return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/doacao" element={<Doacao />} />
-          <Route path="/voluntariado" element={<Voluntariado />} />
-          <Route path="/mentoria" element={<Mentoria />} />
-          <Route path="/eventosEP" element={<EventosEP />} />
-          <Route path="/usuario" element={<Usuario />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </>
-  );
+  return <RouterProvider router={router} />
 }
